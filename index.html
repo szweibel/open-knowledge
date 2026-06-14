@@ -13,6 +13,13 @@
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/theme-light.css">
+<style>
+  .src { font-size: 0.8em; color: var(--ink-soft, #6b6256); margin-top: 0.8em; }
+  .src a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
+  .src-list { columns: 2; column-gap: 2.6em; max-width: 1000px; margin: 0.6em auto 0; font-size: 0.92em; line-height: 1.55; }
+  .src-list li { break-inside: avoid; margin-bottom: 0.6em; }
+  .src-list a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
+</style>
 </head>
 <body>
 
@@ -54,8 +61,8 @@
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 3: We're not here to sell you AI" data-slide="framing" tabindex="-1">
   <span class="kicker">Before we start</span>
   <p class="pull">We&rsquo;re <span class="hl">not here to sell you AI</span>.</p>
-  <p class="lead" style="margin-top: 0.8em;">We teach too. This hour is here to help you decide how to use these tools in your own work, and when to turn them down. The Graduate Center&rsquo;s own AI guidance starts in the same place: human judgment first, and room to say no.</p>
-  <p class="lead" style="margin-top: 0.6em;">We&rsquo;re neither evangelists nor alarmists. What we can offer is a clear look at how the tools work, and an honest read on which worries hold up.</p>
+  <p class="lead" style="margin-top: 0.8em;">We use these tools in our own teaching and work. This hour is here to help you decide how to use them, and when to turn them down. The Graduate Center&rsquo;s own draft AI guidance starts in the same place: human judgment first, with room to say no.</p>
+  <p class="lead" style="margin-top: 0.6em;">We&rsquo;re not trying to talk you into anything. What we can do is explain how the tools work, and tell you which worries we think hold up and which don&rsquo;t.</p>
 </div>
 
 <!-- 4 — YOU'VE USED THESE -->
@@ -64,7 +71,7 @@
     <span class="kicker">Start where you are</span>
     <h2>You&rsquo;ve probably used one</h2>
     <p style="margin-bottom: 0.7em;">ChatGPT, Claude, Copilot, Gemini. The basic experience is familiar: you type something, and it types back.</p>
-    <p>That part is easy. What&rsquo;s worth understanding is what&rsquo;s happening when it answers &mdash; because that&rsquo;s what tells you when to trust it.</p>
+    <p>What happens when it answers is worth knowing, because it tells you when to trust the answer.</p>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
     <img src="images/steve-hello-chat.png" alt="A chat interface: the user says 'Hello!' and the assistant replies warmly and asks how it can help." class="screenshot-img">
@@ -76,8 +83,8 @@
   <div class="content">
     <span class="kicker">The one idea</span>
     <h2>It predicts the next piece of text</h2>
-    <p style="margin-bottom: 0.7em;">When the model answers, it isn&rsquo;t looking anything up. It is predicting, one piece at a time, what text would plausibly come next after yours.</p>
-    <p>That single move is the whole engine. Everything else is built on it.</p>
+    <p style="margin-bottom: 0.7em;">When the model answers, it isn&rsquo;t looking anything up. It&rsquo;s generating a likely continuation of your text, one piece at a time.</p>
+    <p>Underneath, it just does that one step again and again; the more elaborate behavior is all repetition of it.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:340px; margin:0 auto;">
@@ -87,7 +94,7 @@
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
       <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Weighing</div><div class="flow-node-desc">It weighs which earlier words matter most</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Next piece &rarr; repeat</div><div class="flow-node-desc">Pick a likely next piece, then do it again</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Next piece, then repeat</div><div class="flow-node-desc">Pick a likely next piece, then do it again</div></div>
     </div>
   </div>
 </div>
@@ -96,11 +103,11 @@
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 6: What it is not" data-slide="what-its-not" tabindex="-1">
   <span class="kicker">Clearing the fog</span>
   <h2>What it is <em>not</em></h2>
-  <p class="lead center-narrow" style="margin-bottom: 1em;">Most of the confusion comes from treating it as something it isn&rsquo;t.</p>
+  <p class="lead center-narrow" style="margin-bottom: 1em;">People often treat it as something it isn&rsquo;t.</p>
   <div class="grid-3" style="max-width:900px; margin:0 auto;">
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a database</h4><p>It doesn&rsquo;t store and retrieve facts. There&rsquo;s no record in there to look them up in.</p></div>
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a mind</h4><p>It doesn&rsquo;t understand or intend. It models how words tend to follow words.</p></div>
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a search engine</h4><p>On its own it isn&rsquo;t consulting the web. It&rsquo;s generating what sounds right.</p></div>
+    <div class="card card-cyan" style="text-align:center;"><h4>Not a database</h4><p>There&rsquo;s no store of facts inside it to look up.</p></div>
+    <div class="card card-cyan" style="text-align:center;"><h4>Not a mind</h4><p>It doesn&rsquo;t understand or intend anything.</p></div>
+    <div class="card card-cyan" style="text-align:center;"><h4>Not a search engine</h4><p>On its own it isn&rsquo;t checking the web, only generating what fits.</p></div>
   </div>
 </div>
 
@@ -110,10 +117,10 @@
   <h2>&ldquo;Plausible&rdquo; doesn&rsquo;t mean &ldquo;true&rdquo;</h2>
   <p class="lead" style="margin-bottom: 0.8em;">Because it&rsquo;s built to produce what <em>sounds</em> right, it can sound completely sure and still be wrong.</p>
   <div class="grid-2">
-    <div class="card" style="border-left-color: var(--accent-red);"><h4>It invents things</h4><p style="font-size:1.05em;">Citations, quotes, functions, sources that never existed &mdash; delivered as fluently as the true parts.</p></div>
+    <div class="card" style="border-left-color: var(--accent-red);"><h4>It invents things</h4><p style="font-size:1.05em;">Citations, quotes, sources that never existed, stated as fluently as everything else.</p></div>
     <div class="card" style="border-left-color: var(--accent-amber);"><h4>It carries its patterns</h4><p style="font-size:1.05em;">Including the skews in the text it learned from. The output reflects its sources, unevenly.</p></div>
   </div>
-  <div class="tip-box" style="margin-top: 0.8em;"><p>Hold onto this. Most of the real questions about AI come back to the gap between <em>sounds right</em> and <em>is right</em>.</p></div>
+  <p class="src">Models are trained in a way that rewards a confident guess over an honest &ldquo;I don&rsquo;t know.&rdquo; Source: <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Kalai et al. (OpenAI &amp; Georgia Tech), 2025</a>.</p>
 </div>
 
 <!-- 8 — DIVIDER II -->
@@ -126,12 +133,12 @@
 </div>
 
 <!-- 9 — UNGROUNDED -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 9: Fluent but not grounded" data-slide="ungrounded" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 9: It guesses when it can't reach out" data-slide="ungrounded" tabindex="-1">
   <div class="content">
     <span class="kicker">The problem</span>
-    <h2>Fluent, but not grounded</h2>
-    <p style="margin-bottom: 0.7em;">Ask a plain model for today&rsquo;s weather and it makes a confident attempt &mdash; a fluent guess with nothing behind it.</p>
-    <p>It has no way to reach today. It can only produce text that looks like a weather answer.</p>
+    <h2>It guesses when it can&rsquo;t reach out</h2>
+    <p style="margin-bottom: 0.7em;">Ask a plain model for today&rsquo;s weather and it makes a confident guess, with no live data behind it.</p>
+    <p>It can&rsquo;t reach today, so it produces something shaped like a weather answer.</p>
   </div>
   <div class="stage">
     <img src="images/steve-weather-ungrounded.png" alt="A model guessing the New York weather from training patterns, with no live data." class="screenshot-img">
@@ -139,17 +146,17 @@
 </div>
 
 <!-- 10 — GROUNDED -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: It reaches outside itself" data-slide="grounded" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: So it learned to reach outside itself" data-slide="grounded" tabindex="-1">
   <div class="content">
     <span class="kicker">The fix</span>
-    <h2>To do better, it reaches outside itself</h2>
-    <p style="margin-bottom: 0.5em;">Newer systems can pull in information instead of guessing:</p>
+    <h2>So it learned to reach outside itself</h2>
+    <p style="margin-bottom: 0.5em;">Newer systems pull in information instead of guessing:</p>
     <ul style="line-height:1.9;">
       <li><strong>Search</strong> the web</li>
       <li><strong>Read</strong> a file you give it</li>
       <li><strong>Run</strong> code and read the result</li>
     </ul>
-    <p style="margin-top: 0.5em;">Given real sources, the same question gets a real answer. This is the honest fix for the guessing problem.</p>
+    <p style="margin-top: 0.5em;">Given real sources, you get a real answer to the same question.</p>
   </div>
   <div class="stage">
     <img src="images/steve-weather-grounded.png" alt="The same weather question answered after searching live sources, returning current conditions." class="screenshot-img">
@@ -160,7 +167,7 @@
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 11: A tool is something it can call" data-slide="tools" tabindex="-1">
   <span class="kicker">The building block</span>
   <h2>A &ldquo;tool&rdquo; is just something it can call</h2>
-  <p class="lead center-narrow" style="margin-bottom: 1em;">The system hands the model a short list of things it can do, and the model picks one when it seems useful. That&rsquo;s all &ldquo;tool use&rdquo; means.</p>
+  <p class="lead center-narrow" style="margin-bottom: 1em;">The system hands the model a short list of things it can do, and it picks one when that seems useful. People call that tool use.</p>
   <div class="grid-3" style="max-width:900px; margin:0 auto;">
     <div class="card card-cyan" style="text-align:center;"><h4>&#128269; Search</h4><p>Query the web, a catalog, or a repository</p></div>
     <div class="card card-cyan" style="text-align:center;"><h4>&#128196; Fetch</h4><p>Read a file, a page, or a record you point it at</p></div>
@@ -173,9 +180,9 @@
   <div class="content">
     <span class="kicker">The key idea</span>
     <h2>&ldquo;Agentic&rdquo; means it loops</h2>
-    <p style="margin-bottom: 0.7em;"><strong>Plain chatbot:</strong> you ask, it answers.</p>
-    <p style="margin-bottom: 0.7em;"><strong>Agentic:</strong> it keeps going. It looks at a result, decides what to do next, calls another tool, and repeats until the task seems done.</p>
-    <p>That&rsquo;s the whole shift &mdash; a system that takes several steps toward a goal on its own.</p>
+    <p style="margin-bottom: 0.7em;">A plain chatbot answers and stops.</p>
+    <p style="margin-bottom: 0.7em;">An agentic one keeps going. It looks at a result, decides what to do next, calls another tool, and repeats until the task seems done.</p>
+    <p>So it can take several steps toward a goal on its own.</p>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
     <img src="images/steve-agentic-loop-handdrawn.png" alt="A hand-drawn loop: ask, look at the result, decide, call a tool, and repeat until the task is done." class="screenshot-img">
@@ -216,8 +223,8 @@
   <div class="content">
     <span class="kicker">The honest part</span>
     <h2>You can build by describing</h2>
-    <p style="margin-bottom: 0.7em;">Describe what you want in plain language and let the agent make the change &mdash; here, &ldquo;change the site&rsquo;s font to Wingdings.&rdquo; You can make working things without writing every line.</p>
-    <p>Which is exactly why the stakes go up. The more it does on its own, the more you have to read and check what comes back &mdash; more to verify, and more that you&rsquo;re accountable for.</p>
+    <p style="margin-bottom: 0.7em;">Describe what you want in plain language and let the agent make the change. Here, &ldquo;change the site&rsquo;s font to Wingdings.&rdquo; You can make working things without writing every line.</p>
+    <p>The more it does on its own, the more you have to read and check what comes back, and the more you&rsquo;re answerable for it.</p>
   </div>
   <div class="stage">
     <div class="carousel cap-overlay" data-interval="9000">
@@ -246,13 +253,13 @@
 <!-- 16 — THE MOVE -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 16: Let's get precise together" data-slide="the-move" tabindex="-1">
   <span class="kicker">How to read the rest</span>
-  <h2>Let&rsquo;s get precise &mdash; together</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.8em;">There&rsquo;s a lot of noise about AI, hyped and panicked in roughly equal measure. For each worry you&rsquo;ve heard, two questions help:</p>
+  <h2>Let&rsquo;s get precise, together</h2>
+  <p class="lead center-narrow" style="margin-bottom: 0.8em;">There&rsquo;s a lot of noise about AI, from boosters and doomers alike. For each worry you&rsquo;ve heard, two questions help:</p>
   <div class="grid-2" style="max-width:820px; margin:0 auto;">
     <div class="card card-cyan"><h4>What holds up?</h4><p style="font-size:1.05em;">The part of the concern that&rsquo;s real and worth acting on.</p></div>
-    <div class="card card-cyan"><h4>Where does the headline overshoot?</h4><p style="font-size:1.05em;">The part the loudest version inflates or gets wrong.</p></div>
+    <div class="card card-cyan"><h4>Where does the loud version overshoot?</h4><p style="font-size:1.05em;">The part it inflates or gets wrong.</p></div>
   </div>
-  <div class="tip-box" style="margin-top: 0.9em;"><p>The thing we&rsquo;re arguing with is the noisy public conversation, not you. Uncritical refusal and uncritical hype are both just imprecise.</p></div>
+  <p class="lead center-narrow" style="margin-top: 0.9em;">We&rsquo;re arguing with the noisy public version of these worries. None of this is aimed at you. What we&rsquo;d avoid is reacting on reflex, in either direction.</p>
 </div>
 
 <!-- 17 — SLOP -->
@@ -260,9 +267,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>Reliability and &ldquo;slop&rdquo;</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It can be fluently, confidently wrong, and a flood of low-effort output really does degrade the shared pool of writing we all draw on.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">&ldquo;It&rsquo;s all slop&rdquo; is as lazy as &ldquo;it&rsquo;s magic.&rdquo; The skill is knowing when a plausible draft is enough and when you need a verified source.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It can be confidently wrong, and a rising flood of machine-made text degrades the shared pool of writing we all draw on. Trained back on its own output, model quality decays.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">Calling all of it slop is its own kind of not-looking. What matters is telling apart the times a rough draft is fine from the times you need a checked source.</p></div>
   </div>
+  <p class="src">On quality decaying when models train on machine-made text: <a href="https://www.nature.com/articles/s41586-024-07566-y" target="_blank" rel="noopener">Shumailov et al., Nature, 2024</a>.</p>
 </div>
 
 <!-- 18 — BIAS -->
@@ -270,9 +278,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>Bias</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It reflects and can amplify the skews in its training data, and the harm lands unevenly across groups.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">&ldquo;It&rsquo;s biased, so don&rsquo;t use it&rdquo; stops too early. It&rsquo;s biased in ways you can often name and check &mdash; and human and institutional sources are biased too. Scrutiny beats avoidance.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It reflects and can amplify the skews in its training data, and the harm lands unevenly. Models judge identical writing differently by dialect, steering speakers of African American English toward worse outcomes.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">&ldquo;It&rsquo;s biased, so don&rsquo;t use it&rdquo; stops too early. It&rsquo;s biased in ways you can name and test, and human gatekeepers are biased too. So check it, don&rsquo;t just avoid it.</p></div>
   </div>
+  <p class="src">On dialect-based discrimination in model decisions: <a href="https://www.nature.com/articles/s41586-024-07856-5" target="_blank" rel="noopener">Hofmann et al., Nature, 2024</a>.</p>
 </div>
 
 <!-- 19 — LABOR -->
@@ -280,9 +289,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>Labor and academic power</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">The real questions are about power and money &mdash; deskilling pressure, who profits, the people who labeled the data, and AI used as a lever to do more with fewer of us.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">&ldquo;It replaces teachers and writers wholesale&rdquo; isn&rsquo;t what&rsquo;s happening. The near-term reality is task-shift and pressure &mdash; a labor and policy fight, not a fact about the tool.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">The real questions are about power and money: who profits, and the low-paid workers, many in the global south, who label and moderate the data, often for a couple of dollars an hour.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">&ldquo;It replaces teachers and writers wholesale&rdquo; isn&rsquo;t what&rsquo;s happening. The near-term reality is task-shift and pressure. That&rsquo;s a fight about labor and policy, not something the tool settles on its own.</p></div>
   </div>
+  <p class="src">On data-work conditions: <a href="https://techequity.us/2025/09/30/ghost-workers-in-the-machine/" target="_blank" rel="noopener">TechEquity &amp; Alphabet Workers Union&ndash;CWA, 2025</a>.</p>
 </div>
 
 <!-- 20 — CONCENTRATION -->
@@ -290,9 +300,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>Corporate concentration</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">A handful of companies control the models, the terms, and the prices, and dependence on them is a real risk.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">Abstaining doesn&rsquo;t answer concentration &mdash; it just cedes the ground. The answer is public and open alternatives, which is part of why this lab exists.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">A few firms control the models, the chips, and the cloud, and set the terms and prices. One company holds over 80% of the AI chip market. Dependence on them is a real risk.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">Abstaining doesn&rsquo;t answer that; it hands them the field. The answer is public and open alternatives, which is part of why this lab exists.</p></div>
   </div>
+  <p class="src">On concentration across chips, cloud, and models: <a href="https://www.oecd.org/en/publications/competition-in-artificial-intelligence-infrastructure_623d1874-en.html" target="_blank" rel="noopener">OECD, 2025</a>.</p>
 </div>
 
 <!-- 21 — ENVIRONMENT -->
@@ -300,9 +311,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>The environmental cost</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">Data centers can strain local water and power, especially where they&rsquo;re sited in dry regions, and the industry is often secretive about it. That&rsquo;s a siting and governance problem worth pressure.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">Two inflated versions: that one person&rsquo;s use matters much (it&rsquo;s a rounding error), and that the totals are apocalyptic (they&rsquo;re small next to power generation and farming). Refusing a chatbot doesn&rsquo;t touch the real issue.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">Data centers can strain local water and power, especially where they&rsquo;re sited in dry regions, and the industry is often secretive about it. Training one large model can evaporate hundreds of thousands of liters. It&rsquo;s a siting and governance problem.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">Two inflated versions: that one person&rsquo;s use matters much (it&rsquo;s a rounding error), and that the totals are apocalyptic (still small next to power and farming). Refusing a chatbot doesn&rsquo;t change any of it.</p></div>
   </div>
+  <p class="src">On water and energy at the infrastructure scale: <a href="https://dl.acm.org/doi/10.1145/3724499" target="_blank" rel="noopener">Li et al., CACM, 2025</a>; <a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">IEA, Energy and AI, 2025</a>.</p>
 </div>
 
 <!-- 22 — THEFT / LICENSING -->
@@ -310,9 +322,10 @@
   <span class="kicker">Which worries hold up?</span>
   <h2>&ldquo;They trained on our work&rdquo;</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">The unease is fair. A lot of open and public writing was used for training without anyone being asked, and that sits badly.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">The open licenses we use were written to permit broad reuse, and a notice can&rsquo;t un-grant that. Work you edit and shape is still yours to license. The field&rsquo;s actual move is reciprocity &mdash; credit and contribution back &mdash; not a blockade.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">The unease is fair. A lot of open and public writing was used for training, and most people were never asked.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">The open licenses we use were written to permit broad reuse, and a notice can&rsquo;t take that permission back. Work you edit and shape is yours to license. The field is moving toward reciprocity, with credit and contribution back to creators.</p></div>
   </div>
+  <p class="src">On human-authored work staying copyrightable: <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf" target="_blank" rel="noopener">U.S. Copyright Office, Part 2, 2025</a>. On reciprocity: <a href="https://creativecommons.org/2025/07/02/why-cc-signals-an-update/" target="_blank" rel="noopener">Creative Commons, CC signals, 2025</a>.</p>
 </div>
 
 <!-- 23 — DIVIDER IV -->
@@ -330,18 +343,18 @@
   <h2>Academic integrity</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
     <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It genuinely disrupts how we assess writing, and writing is where a lot of thinking happens. That&rsquo;s a real pedagogical problem.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the headline overshoots</h4><p style="font-size:1.05em;">Detectors and bans aren&rsquo;t the answer &mdash; the detectors aren&rsquo;t reliable enough to accuse a student, and bans don&rsquo;t hold. The work is redesigning what and how we assess.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where the loud version overshoots</h4><p style="font-size:1.05em;">Detectors and bans aren&rsquo;t the answer. Detectors mis-flag honest work, fall hardest on non-native writers, and have wrongly accused real students. The response is to rethink how we assess, not to police it.</p></div>
   </div>
-  <div class="tip-box" style="margin-top: 0.8em;"><p>The Graduate Center&rsquo;s own guidance says as much: detector scores shouldn&rsquo;t be treated as proof of misconduct.</p></div>
+  <p class="src">On detector unreliability in education: <a href="https://www.mdpi.com/2078-2489/16/10/905" target="_blank" rel="noopener">Information (MDPI), 2025</a>.</p>
 </div>
 
 <!-- 25 — WHERE AI HELPS OER -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 25: Where it genuinely helps OER" data-slide="helps-oer" tabindex="-1">
   <span class="kicker">The useful part</span>
   <h2>Where it genuinely helps OER</h2>
-  <p class="lead center-narrow">For making and adapting open materials, a few uses are real wins &mdash; as long as a person owns the result.</p>
+  <p class="lead center-narrow">For making and adapting open materials, a few uses are real wins, as long as a person owns the result.</p>
   <div class="axes" style="margin-top: 1.2em;">
-    <div class="axis"><span class="ax-num">&#9855;</span><h4>Accessibility</h4><p>Draft alt text and captions, then check them. A tedious, real obligation it can speed up.</p></div>
+    <div class="axis"><span class="ax-num">&#9855;</span><h4>Accessibility</h4><p>Draft alt text and captions, then check them. It can speed up a tedious, real obligation.</p></div>
     <div class="axis"><span class="ax-num">&#128196;</span><h4>Digitization</h4><p>Turn scanned pages and old PDFs into editable, publishable text.</p></div>
     <div class="axis"><span class="ax-num">&#9998;</span><h4>Drafting &amp; translation</h4><p>First drafts, summaries, and rough translations you revise into shape.</p></div>
   </div>
@@ -351,12 +364,12 @@
 <div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 26: Judging appropriate use" data-slide="judging" tabindex="-1">
   <span class="kicker">The throughline</span>
   <h2>Judging appropriate use</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.8em;">A few questions that travel across every case:</p>
+  <p class="lead center-narrow" style="margin-bottom: 0.8em;">A few questions to ask in every case:</p>
   <div class="grid-2">
-    <div class="card card-navy"><h4>Accountable</h4><p style="font-size:1.05em;">A person stands behind the result &mdash; and it&rsquo;s theirs to license once they&rsquo;ve shaped it.</p></div>
+    <div class="card card-navy"><h4>Accountable</h4><p style="font-size:1.05em;">A person stands behind the result, and it&rsquo;s theirs to license once they&rsquo;ve shaped it.</p></div>
     <div class="card card-navy"><h4>Disclosed</h4><p style="font-size:1.05em;">Say where AI helped. The lab&rsquo;s disclosure tool keeps this light.</p></div>
     <div class="card card-navy"><h4>Verified</h4><p style="font-size:1.05em;">Check what it produced against a real source before it ships.</p></div>
-    <div class="card card-navy"><h4>Grounded</h4><p style="font-size:1.05em;">Give it your materials rather than trusting it to know.</p></div>
+    <div class="card card-navy"><h4>Grounded</h4><p style="font-size:1.05em;">Hand it your own materials; don&rsquo;t rely on it to already know.</p></div>
   </div>
 </div>
 
@@ -366,8 +379,8 @@
   <h2>ThinkWith</h2>
   <p class="lead" style="margin-bottom: 0.8em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage, a cultural artifact, and a paragraph connecting them; the model gives feedback against a four-stage scale, from inert juxtaposition to real synthesis.</p>
   <div class="grid-2">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What worked</h4><p style="font-size:1.05em;">The AI doesn&rsquo;t write the paragraph. It keeps asking the student to revise until the claim actually needs both the source and the artifact. The thinking, and the authorship, stay with the student.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where it breaks</h4><p style="font-size:1.05em;">The judge is itself a model scoring a rubric &mdash; it can misread synthesis, so the teacher&rsquo;s standard, not the tool&rsquo;s, is the real backstop. And Walker names the deeper cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What worked</h4><p style="font-size:1.05em;">The AI doesn&rsquo;t write the paragraph. It keeps asking the student to revise until the claim actually needs both the source and the artifact. The student does the thinking and keeps the authorship.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where it breaks</h4><p style="font-size:1.05em;">The judge is itself a model scoring a rubric, so the teacher&rsquo;s standard is the real backstop. And Walker names the deeper cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p></div>
   </div>
   <div class="tip-box" style="margin-top: 0.8em;"><p>A person designed it and owns the standard; the model only speeds the revision loop.</p></div>
 </div>
@@ -376,24 +389,43 @@
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 28: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
   <span class="kicker">Where this lands</span>
   <h2>Informed refusal <em>and</em> informed adoption</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.8em;">Both are real choices. The point of the last half hour was to make either one something you can defend.</p>
+  <p class="lead center-narrow" style="margin-bottom: 0.8em;">Both are real choices. Whichever you make, you should be able to say why. That&rsquo;s what the last half hour was for.</p>
   <div class="grid-2" style="max-width:820px; margin:0 auto;">
-    <div class="card" style="border-left-color: var(--accent-cyan);"><h4>Adopt, with reasons</h4><p style="font-size:1.05em;">Use it where it earns its place &mdash; accountable, disclosed, verified &mdash; and say why.</p></div>
-    <div class="card" style="border-left-color: var(--accent-red);"><h4>Refuse, with reasons</h4><p style="font-size:1.05em;">Decline it where it doesn&rsquo;t fit, and say why. The GC guidance leaves room for exactly this.</p></div>
+    <div class="card" style="border-left-color: var(--accent-cyan);"><h4>Adopt, with reasons</h4><p style="font-size:1.05em;">Use it where it actually helps, accountable and disclosed and checked, and say why.</p></div>
+    <div class="card" style="border-left-color: var(--accent-red);"><h4>Refuse, with reasons</h4><p style="font-size:1.05em;">Decline it where it doesn&rsquo;t fit, and say why. The GC guidance leaves room for exactly that.</p></div>
   </div>
 </div>
 
 <!-- 29 — DISCUSSION -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 29: A few places to start" data-slide="discussion" tabindex="-1">
-  <span class="kicker">Over to you &mdash; the next half hour</span>
+  <span class="kicker">Over to you, for the next half hour</span>
   <h2>A few places to start</h2>
   <div class="disc-grid">
-    <div class="disc"><span class="q-num">1</span><p>Where in your teaching would a grounded, course-specific assistant actually help, and where would it get in the way?</p></div>
+    <div class="disc"><span class="q-num">1</span><p>Where in your teaching would a grounded, course-specific assistant help, and where would it get in the way?</p></div>
     <div class="disc"><span class="q-num">2</span><p>What would <strong>informed refusal</strong> look like in your field? What would you want to tell a student about it?</p></div>
-    <div class="disc"><span class="q-num">3</span><p>If you released an OER, how would you want AI to be allowed to use it &mdash; or not?</p></div>
+    <div class="disc"><span class="q-num">3</span><p>If you released an OER, how would you want AI to be allowed to use it, or not?</p></div>
     <div class="disc"><span class="q-num">4</span><p>What&rsquo;s one resource you&rsquo;ve wanted to build but couldn&rsquo;t? Could anything here lower that barrier?</p></div>
     <div class="disc"><span class="q-num">5</span><p>Which of today&rsquo;s worries still feels unresolved to you? Let&rsquo;s push on it.</p></div>
   </div>
+</div>
+
+<!-- 30 — SOURCES -->
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 30: Sources" data-slide="sources" tabindex="-1">
+  <span class="kicker">Sources</span>
+  <h2>Where these claims come from</h2>
+  <ul class="src-list">
+    <li>Kalai et al. (OpenAI &amp; Georgia Tech), <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">&ldquo;Why Language Models Hallucinate,&rdquo;</a> 2025.</li>
+    <li>Shumailov et al., <a href="https://www.nature.com/articles/s41586-024-07566-y" target="_blank" rel="noopener">&ldquo;AI models collapse when trained on recursively generated data,&rdquo;</a> Nature, 2024.</li>
+    <li>Hofmann et al., <a href="https://www.nature.com/articles/s41586-024-07856-5" target="_blank" rel="noopener">&ldquo;AI generates covertly racist decisions about people based on their dialect,&rdquo;</a> Nature, 2024.</li>
+    <li>TechEquity &amp; Alphabet Workers Union&ndash;CWA, <a href="https://techequity.us/2025/09/30/ghost-workers-in-the-machine/" target="_blank" rel="noopener">&ldquo;Ghost Workers in the AI Machine,&rdquo;</a> 2025.</li>
+    <li>OECD, <a href="https://www.oecd.org/en/publications/competition-in-artificial-intelligence-infrastructure_623d1874-en.html" target="_blank" rel="noopener">&ldquo;Competition in Artificial Intelligence Infrastructure,&rdquo;</a> 2025.</li>
+    <li>Li, Yang, Islam &amp; Ren, <a href="https://dl.acm.org/doi/10.1145/3724499" target="_blank" rel="noopener">&ldquo;Making AI Less &lsquo;Thirsty&rsquo;,&rdquo;</a> Communications of the ACM, 2025.</li>
+    <li>IEA, <a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">&ldquo;Energy and AI,&rdquo;</a> 2025.</li>
+    <li><a href="https://heatmap.news/plus/the-fight/spotlight/ai-data-centers-water-usage" target="_blank" rel="noopener">&ldquo;AI data centers&rsquo; water usage,&rdquo;</a> Heatmap, 2025.</li>
+    <li>U.S. Copyright Office, <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf" target="_blank" rel="noopener">&ldquo;Copyright and Artificial Intelligence, Part 2,&rdquo;</a> 2025.</li>
+    <li>Creative Commons, <a href="https://creativecommons.org/2025/07/02/why-cc-signals-an-update/" target="_blank" rel="noopener">&ldquo;Why CC Signals,&rdquo;</a> 2025.</li>
+    <li>AI-detection review, <a href="https://www.mdpi.com/2078-2489/16/10/905" target="_blank" rel="noopener">Information (MDPI),</a> 2025.</li>
+  </ul>
 </div>
 
 </div><!-- /deck -->
@@ -401,7 +433,7 @@
 <nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="29" aria-valuenow="1" aria-valuetext="Slide 1 of 29" tabindex="0">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="30" aria-valuenow="1" aria-valuetext="Slide 1 of 30" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
