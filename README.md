@@ -4,7 +4,7 @@ A CUNY AI Lab session for the **Open Knowledge Fellowship** at the CUNY Graduate
 Center. A redraft of the original deck, rebuilt around critical AI literacy for
 an audience new to AI and broadly wary of it.
 
-**Live:** https://szweibel.github.io/open-knowledge/
+**Live:** https://zweibel.net/open-knowledge/
 
 ## What it is
 A single-page, static HTML slide deck — no build step. Open `index.html`
