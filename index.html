@@ -268,12 +268,12 @@
 </div>
 
 <!-- 17 — SLOP -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: Reliability and slop" data-slide="worry-slop" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: Hollow text" data-slide="worry-slop" tabindex="-1">
   <span class="kicker">A common worry</span>
-  <h2>Reliability and &ldquo;slop&rdquo;</h2>
+  <h2>Hollow text</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It can be confidently wrong. As the web fills with machine-made text, it gets harder to find trustworthy writing, and models trained on their own output decay.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">Still, not everything it writes is junk. A rough draft is often fine; when something has to be right, check it against a source.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">Writing is worth something because a person is behind it, trying to say something they mean. Machine text can read just as well with nothing behind it. A flood of it crowds out human writing, and models trained on that output degrade.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">It doesn&rsquo;t follow that anything AI touches is empty. Meaning comes from the person thinking and standing behind the words, even when a tool helped draft them.</p></div>
   </div>
   <p class="src">On quality decaying when models train on machine-made text: <a href="https://www.nature.com/articles/s41586-024-07566-y" target="_blank" rel="noopener">Shumailov et al., Nature, 2024</a>.</p>
 </div>
@@ -294,8 +294,8 @@
   <span class="kicker">A common worry</span>
   <h2>Labor and academic power</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It&rsquo;s mostly about power and money: who profits, and the low-paid workers, many in the global south, who label and moderate the data, often for a couple of dollars an hour.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">It isn&rsquo;t replacing teachers or writers wholesale. For now it mostly shifts tasks around and adds pressure.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">Jobs are at stake, from writers and teachers to the underpaid workers in the global south who label the data for a couple of dollars an hour. It&rsquo;s already being used to argue for doing more with fewer people.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">It doesn&rsquo;t replace people on its own. The cuts and the pressure come from human decisions about how it&rsquo;s deployed, and those can change.</p></div>
   </div>
   <p class="src">On data-work conditions: <a href="https://techequity.us/2025/09/30/ghost-workers-in-the-machine/" target="_blank" rel="noopener">TechEquity &amp; Alphabet Workers Union&ndash;CWA, 2025</a>.</p>
 </div>
@@ -379,15 +379,24 @@
 </div>
 
 <!-- 27 — EXAMPLE: ThinkWith -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 27: An example, ThinkWith" data-slide="example" tabindex="-1">
-  <span class="kicker">An example</span>
-  <h2>ThinkWith</h2>
-  <p class="lead" style="margin-bottom: 0.8em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage, a cultural artifact, and a paragraph connecting them; the model gives feedback against a four-stage scale, from loose juxtaposition to full synthesis.</p>
-  <div class="grid-2">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What worked</h4><p style="font-size:1.05em;">The AI doesn&rsquo;t write the paragraph. It makes the student keep revising until the paragraph ties the source and the artifact together.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where it breaks</h4><p style="font-size:1.05em;">The judge is itself a model scoring a rubric, so the teacher still has to judge the result. And Walker names the deeper cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p></div>
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 27: An example, ThinkWith" data-slide="example" tabindex="-1">
+  <div class="content">
+    <span class="kicker">An example</span>
+    <h2>ThinkWith</h2>
+    <p style="margin-bottom: 0.6em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage, a cultural artifact, and a paragraph connecting them. The model gives feedback on how well the connection works.</p>
+    <p style="margin-bottom: 0.6em;"><strong>What worked:</strong> the AI doesn&rsquo;t write the paragraph. It makes the student keep revising until the paragraph ties the source and the artifact together.</p>
+    <p><strong>Where it breaks:</strong> the judge is itself a model scoring a rubric, so the teacher still has to judge the result. Walker names the cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p>
   </div>
-  <div class="tip-box" style="margin-top: 0.8em;"><p>A person designed it and sets the standard; the model speeds up the revisions.</p></div>
+  <div class="stage stage-embed">
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <a class="browser-url" href="https://ailab.gc.cuny.edu/blog/thinkwith/" target="_blank" rel="noopener"><span class="lock" aria-hidden="true">&#128274;</span> ailab.gc.cuny.edu/blog/thinkwith</a>
+        <a class="browser-open" href="https://ailab.gc.cuny.edu/blog/thinkwith/" target="_blank" rel="noopener">Open live &#8599;</a>
+      </div>
+      <div class="browser-body"><iframe data-src="https://ailab.gc.cuny.edu/blog/thinkwith/" title="Live preview of the ThinkWith blog post" loading="lazy"></iframe></div>
+    </div>
+  </div>
 </div>
 
 <!-- 28 — REFUSAL AND ADOPTION -->
