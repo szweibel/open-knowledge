@@ -145,7 +145,7 @@
   <span class="ghost" aria-hidden="true">II</span>
   <span class="section-label">Part II</span>
   <h2>What It Can Do Now</h2>
-  <p class="divider-sub">Tools, loops, and review</p>
+  <p class="divider-sub">What it can do, and what to check</p>
   <div class="divider-line"></div>
 </div>
 
@@ -186,7 +186,7 @@
   <h2>Tools it can call</h2>
   <p class="lead center-narrow" style="margin-bottom: 1em;">The system hands the model a short list of things it can do, and it picks one when that seems useful. That&rsquo;s &ldquo;tool use.&rdquo;</p>
   <div class="grid-3" style="max-width:900px; margin:0 auto;">
-    <div class="card card-cyan" style="text-align:center;"><h4>&#128269; Search</h4><p>Query the web, a catalog, or a repository</p></div>
+    <div class="card card-cyan" style="text-align:center;"><h4>&#128269; Search</h4><p>Query the web or a catalog</p></div>
     <div class="card card-cyan" style="text-align:center;"><h4>&#128196; Fetch</h4><p>Read a file, a page, or a record you point it at</p></div>
     <div class="card card-cyan" style="text-align:center;"><h4>&#9881;&#65039; Run</h4><p>Execute code and read back the result</p></div>
   </div>
@@ -272,7 +272,7 @@
   <span class="kicker">A common worry</span>
   <h2>Reliability and &ldquo;slop&rdquo;</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It can be confidently wrong. As the web fills with machine-made text, the writing everyone draws on gets worse, and models trained on their own output decay.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It can be confidently wrong. As the web fills with machine-made text, it gets harder to find trustworthy writing, and models trained on their own output decay.</p></div>
     <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">Still, not everything it writes is junk. A rough draft is often fine; when something has to be right, check it against a source.</p></div>
   </div>
   <p class="src">On quality decaying when models train on machine-made text: <a href="https://www.nature.com/articles/s41586-024-07566-y" target="_blank" rel="noopener">Shumailov et al., Nature, 2024</a>.</p>
@@ -283,7 +283,7 @@
   <span class="kicker">A common worry</span>
   <h2>Bias</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It reflects and can amplify the skews in its training data, and the harm lands unevenly. Models judge identical writing differently by dialect, steering speakers of African American English toward worse outcomes.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">It reflects and can amplify the skews in its training data, and it hurts some groups more than others. Models judge identical writing differently by dialect, steering speakers of African American English toward worse outcomes.</p></div>
     <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">Dropping the tool doesn&rsquo;t remove the bias. It&rsquo;s measurable, you can test for it, and human reviewers carry their own.</p></div>
   </div>
   <p class="src">On dialect-based discrimination in model decisions: <a href="https://www.nature.com/articles/s41586-024-07856-5" target="_blank" rel="noopener">Hofmann et al., Nature, 2024</a>.</p>
@@ -305,8 +305,8 @@
   <span class="kicker">A common worry</span>
   <h2>Corporate concentration</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">A few firms control the models, the chips, and the cloud, and set the terms and prices. One company holds over 80% of the AI chip market.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">Abstaining doesn&rsquo;t change the concentration; it leaves those firms in control. This lab runs a public, non-commercial alternative for CUNY, built on open models.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What holds up</h4><p style="font-size:1.05em;">A few firms control the models and the cloud, and set the terms and prices. One company holds over 80% of the AI chip market.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What&rsquo;s overstated</h4><p style="font-size:1.05em;">Abstaining doesn&rsquo;t change the concentration; it leaves those firms in control. We run a public, non-commercial alternative for CUNY, built on open models.</p></div>
   </div>
   <p class="src">On concentration across chips, cloud, and models: <a href="https://www.oecd.org/en/publications/competition-in-artificial-intelligence-infrastructure_623d1874-en.html" target="_blank" rel="noopener">OECD, 2025</a>.</p>
 </div>
@@ -384,8 +384,8 @@
   <h2>ThinkWith</h2>
   <p class="lead" style="margin-bottom: 0.8em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage, a cultural artifact, and a paragraph connecting them; the model gives feedback against a four-stage scale, from loose juxtaposition to full synthesis.</p>
   <div class="grid-2">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>What worked</h4><p style="font-size:1.05em;">The AI doesn&rsquo;t write the paragraph. It keeps asking the student to revise until the claim needs both the source and the artifact.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where it breaks</h4><p style="font-size:1.05em;">The judge is itself a model scoring a rubric, so the teacher&rsquo;s standard is the backstop. And Walker names the deeper cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>What worked</h4><p style="font-size:1.05em;">The AI doesn&rsquo;t write the paragraph. It makes the student keep revising until the paragraph ties the source and the artifact together.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Where it breaks</h4><p style="font-size:1.05em;">The judge is itself a model scoring a rubric, so the teacher still has to judge the result. And Walker names the deeper cost plainly: building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p></div>
   </div>
   <div class="tip-box" style="margin-top: 0.8em;"><p>A person designed it and sets the standard; the model speeds up the revisions.</p></div>
 </div>
