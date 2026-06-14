@@ -30,7 +30,7 @@
 | 24 | integrity | Academic integrity | Stefano |
 | 25 | helps-oer | Where it genuinely helps OER | Stefano |
 | 26 | judging | Judging appropriate use | Stefano |
-| 27 | example | One honest example (PLACEHOLDER) | Stefano |
+| 27 | example | One honest example — ThinkWith | Stefano |
 | 28 | refusal | Informed refusal and adoption | Stefano |
 | 29 | discussion | A few places to start | all |
 
